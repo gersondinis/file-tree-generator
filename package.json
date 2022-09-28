@@ -1,0 +1,98 @@
+{
+  "name": "file-tree-generate",
+  "displayName": "File Tree Generator",
+  "description": "You can customise your file templates to quickly generate a file tree inside a directory.",
+  "version": "0.0.4",
+  "publisher": "GersonDiniz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gersondinis/file-tree-generator"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0094C8",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "automate",
+    "react",
+    "react component",
+    "snippets"
+  ],
+  "activationEvents": [
+    "onCommand:extension.generatefiletree"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.generatefiletree",
+        "title": "Generate File Tree"
+      }
+    ],
+    "configuration": {
+      "title": "File tree generator",
+      "properties": {
+        "filetreegenerator.directory": {
+          "type": "string",
+          "default": "Pn$"
+        },
+        "filetreegenerator.files": {
+          "type": "array",
+          "default": [
+            {
+              "fileName": "Pn$.tsx",
+              "content": "\r\nimport {FC, ReactNode} from 'react';\r\nimport classes from './Pn$.module.scss';\r\nimport classNames from 'classnames/bind';\r\n\r\n\r\nconst cx = classNames.bind(classes);\r\n\r\nexport const Cn$: FC<ICn$> = ({children}: ICn$) => {\r\n  return (\r\n    <div className={cx({'fn$': true})}>\r\n      {children}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport interface ICn$ {\r\n  children?: ReactNode;\r\n}\n"
+            },
+            {
+              "fileName": "Pn$.module.scss",
+              "content": "\r\n.kn$ {\r\n  \r\n}\n"
+            }
+          ],
+          "description": "Specify the skeleton code of files you want to create for your tree."
+        }
+      }
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.generatefiletree",
+          "group": "2_workspace"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.71.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "@vscode/test-electron": "^2.1.5"
+  }
+}
