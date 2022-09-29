@@ -32,6 +32,11 @@ Follow these steps to create your custom configuration:
         }
     ]
 
+##### You can easily create a `template` from an **existing file**, just by:
+- open `find & replace` by pressing `cmd + r`
+- press `ctrl + enter` on **find** field
+- replace with `'\r\n'`
+- That's it!
 
 Entered name replacement keywords:
 - `fn$` **entered name**

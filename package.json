@@ -2,7 +2,7 @@
   "name": "file-tree-generate",
   "displayName": "File Tree Generator",
   "description": "You can customise your file templates to quickly generate a file tree inside a directory.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "GersonDiniz",
   "repository": {
     "type": "git",
