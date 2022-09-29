@@ -2,12 +2,14 @@
 
 [Marketplace link](https://marketplace.visualstudio.com/items?itemName=GersonDiniz.file-tree-generate)
 
+![Generating file tree](images/how-to-use.gif)
+
 ### How to use
-- Right click on file explorer and then `Generate File Tree`, that's it!
+- Right click on file explorer and then `Generate File Tree`, name it, that's it!
 
 ### Custom configuration
 
-Follow these steps to create your custom configuration for react component:
+Follow these steps to create your custom configuration:
 
 1. Open Settings menu through `Preferences > Settings` OR `Command` + `,`
 2. Search for **filetreegenerator** and click on `Edit in settings.json` link under **filetreegenerator** option.
@@ -31,7 +33,7 @@ Follow these steps to create your custom configuration for react component:
     ]
 
 
-Replacement keywords:
+Entered name replacement keywords:
 - `fn$` **entered name**
 - `cN$` **camelCase** 
 - `cn$` **camelCase** 
